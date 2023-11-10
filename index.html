@@ -43,7 +43,8 @@
             background-color: orange;
         }
 
-        .header, .footer {
+        .header,
+        .footer {
             background-color: darkred;
         }
 
@@ -62,9 +63,9 @@
     <div class="container">Container
         <div class="main row d-flex flex-row-reverse flex-wrap">
             <div class="right-main col-md-3 order-1">Right
-                <div class="profile row d-flex flex-wrap">
+                <div class="profile row g-0 d-flex flex-wrap align-self-center">
                     <div class="profile-img col-md-12 ">
-                        <img class="profilepic img-fluid" src="image.jpg" alt="profilepic">
+                        <img class="profilepic img-fluid align-self-center" src="profilepic.jpg" alt="profilepic">
                     </div>
                     <div class="user-name col-md-12">USERNAME</div>
                 </div>
@@ -78,11 +79,15 @@
                 </div>
             </div>
             <div class="left-main col-md-9 order-2">Left
-                <div class="header row">
-                    <div class="top-menu row d-flex flex-wrap">
+                <div class="header row g-0 p-2 h-auto">
+                    <!-- Was not in the wireframe plan, but decided to add an icon in the top left corner. -->
+                    <div class="top-icon col-md-1 row g-0 d-flex flex-row flex-wrap align-self-center">
+                        <img class="icon img-fluid" src="icon.jpg" alt="profilepic">
+                    </div>
+                    <div class="top-buttons col-md-11 row g-0 d-flex flex-row flex-wrap justify-content-end align-self-center">
                         <div class="dropdown col-md-2">
                             <button class="btn btn-primary dropdown-toggle " type="button"
-                                data-toggle="dropdown">Dropdown
+                                data-toggle="dropdown">Button 1
                                 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="index.html">1</a></li>
@@ -92,7 +97,7 @@
                         </div>
                         <div class="dropdown col-md-2">
                             <button class="btn btn-primary dropdown-toggle" type="button"
-                                data-toggle="dropdown">Dropdown
+                                data-toggle="dropdown">Button 2
                                 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="index.html">1</a></li>
@@ -102,7 +107,7 @@
                         </div>
                         <div class="dropdown col-md-2">
                             <button class="btn btn-primary dropdown-toggle" type="button"
-                                data-toggle="dropdown">Dropdown
+                                data-toggle="dropdown">Button 3
                                 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="index.html">1</a></li>
@@ -112,7 +117,7 @@
                         </div>
                         <div class="dropdown col-md-2">
                             <button class="btn btn-primary dropdown-toggle" type="button"
-                                data-toggle="dropdown">Dropdown
+                                data-toggle="dropdown">Button 4
                                 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="#">1</a></li>
@@ -122,20 +127,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="content row">
-                    <div class="gallery col-md-5">
-                        <div class="column1 col-12">
-                            <img class="carousel img-fluid" src="image.jpg" alt="carosel-img">
+                <!-- Main display and side gallery columns. -->
+                <div class="content row g-0 d-flex flex flex-wrap">
+                    <!-- Set scroll for overflow-y on columns, but is not working. Will come back to it. -->
+                    <div class="gallery col-md-">
+                        <div class="col-md-5 d-flex flex-row flex-wrap justify-content-start">
+                        <div class="column1 col-12 p-2 overflow-y-scroll">
+                            <img class="carousel img-fluid align-self-center" src="image1.jpg" alt="carosel-img">
                             <br>
-                            CAROUSEL GALLERY
+                            CAROUSEL IMAGE GALLERY
                             <br>
-                            <img class="carousel img-fluid" src="image.jpg" alt="carosel-img">
+                            <img class="carousel img-fluid align-self-center" src="image2.jpg" alt="carosel-img">
                         </div>
                     </div>
+                    <!-- Why isn't this wrapping? Come back to this. -->
                     <div class="display col-md-7">
-                        <div class="column2 col-md-12">
+                        <div class="column2 col-md-12 p-2 overflow-y-auto">
                             <div class="content-text">
                                 Main Content Stuff Goes Here
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
                                 necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis eveniet
                                 culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet consectetur
@@ -145,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Footer can hold some additional links. -->
                 <div class="footer row g-0 d-flex flex-wrap h-auto">
                     <div class="footer-text col-md-12 p-2">
                         <p>Footer</p>
@@ -153,9 +202,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    </div>
     </div>
 </body>
 
