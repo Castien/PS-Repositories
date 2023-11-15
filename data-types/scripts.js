@@ -86,7 +86,7 @@ console.log(chainProb3);
 // console.log(chainProb);
 
 // Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
-const isLessThan25 = (n1 >= 25 && n2 >= 25 && n3 >= 25 && n4 >= 25);
+const isLessThan25 = (n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25);
 console.log(isLessThan25);
 const isValidAgain = isSum50 && isTwoOdd && isLessThan25 && isUnique;
 console.log("The result should be false: " + isValidAgain);
@@ -101,22 +101,45 @@ console.log("The result should be false: " + isValidAgain);
 // You have a fuel budget of $175.
 // The average cost of fuel is $3 per gallon.
 // Set up a program to answer the following questions:
-// How many gallons of fuel will you need for the entire trip?
-// const fuelGallons1 = 1500 / 30;
-// console.log(fuelGallons1 + " gallons to cover 1,500 miles at 55 MPH.");
-// const fuelGallons2 = 1500 / 28;
-// console.log(fuelGallons2 + " gallons to cover 1,500 miles at 60 MPH.");
-// const fuelGallons3 = 1500 / 23;
-// console.log(fuelGallons3 + " gallons to cover 1,500 miles at 75 MPH.");
-// // Will your budget be enough to cover the fuel expense?
-// const budget1 = fuelGallons1 * 3;
-// console.log(budget1 + " needed to cover expenses.");
-// const budget2 = fuelGallons2 * 3;
-// console.log(budget2 + " needed to cover expenses.");
-// const budget3 = fuelGallons3 * 3;
-// console.log(budget3 + " needed to cover expenses.");
-// // How long will the trip take, in hours?
-// // Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?
-// // Log the results of your calculations using string concatenation or template literals.
 
-// console.log(1 + 2 === 3);
+// How many gallons of fuel will you need for the entire trip?
+const fuelGallons1 = 1500 / 30;
+console.log(fuelGallons1 + " gallons to cover 1,500 miles at 55 MPH.");
+const fuelGallons2 = 1500 / 28;
+console.log(fuelGallons2 + " gallons to cover 1,500 miles at 60 MPH.");
+const fuelGallons3 = 1500 / 23;
+console.log(fuelGallons3 + " gallons to cover 1,500 miles at 75 MPH.");
+
+// // Will your budget be enough to cover the fuel expense?
+const budget1 = fuelGallons1 * 3;
+console.log("$" + budget1 + " needed to cover expenses at 55 MPH..");
+const budget2 = fuelGallons2 * 3;
+console.log("$" + budget2 + " needed to cover expenses at 60 MPH.");
+const budget3 = fuelGallons3 * 3;
+console.log("$" + budget3 + " needed to cover expenses at 75 MPH.");
+
+// How long will the trip take, in hours?
+const timeTaken1 = 1500 / 55;
+console.log(timeTaken1 + " hours to drive the whole trip at 55 MPH.");
+const timeTaken2 = 1500 / 60;
+console.log(timeTaken2 + " hours to drive the whole trip at 60 MPH.");
+const timeTaken3 = 1500 / 75;
+console.log(timeTaken3 + " hours to drive the whole trip at 75 MPH.");
+
+// Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?
+const result1 = 175 - budget1;
+const result2 = 175 - budget2;
+const result3 = 175 - budget3;
+
+console.log("At 55 MPH, the fuel cost is $" + budget1 + " and will take " + timeTaken1 + " hours.")
+console.log("That left a remainder of $" + result1 + " dollars in the budget");
+console.log("At 60 MPH, the fuel cost is $" + budget2 + " and will take " + timeTaken2 + " hours.")
+console.log("That left a remainder of $" + result2 + " dollars in the budget");
+console.log("At 75 MPH, the fuel cost is $" + budget3 + " and will take " + timeTaken3 + " hours.")
+console.log("That left a remainder of $" + result3 + " dollar in the budget");
+
+console.log("The best trip time within budget is 60 MPH.")
+
+
+// Log the results of your calculations using string concatenation or template literals.
+
