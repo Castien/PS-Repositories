@@ -1,3 +1,6 @@
+console.log("=======================================================================");
+console.log("The Examples");
+console.log("=======================================================================");
 // The initial numbers that must be verified. We have four numbers that need to add up to 50. At least two of these numbers must be odd. No number can be larger than 25, and each number must be unique.
 const n1 = 10;
 const n2 = 15;
@@ -47,38 +50,47 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+console.log(dontDoThis);
 
+console.log("=======================================================================");
 console.log("My Answers");
+console.log("=======================================================================");
+
+// const n1 = 10;
+// const n2 = 15;
+// const n3 = 20;
+// const n4 = 5;
 
 // Check if all numbers are divisible by 5. Cache the result in a variable.//
 const divisibleBy5 = (n1 % 5 && n2 % 5 && n3 % 5 && n4 % 5) == 0;
 console.log(divisibleBy5);
 
 // Check if the first number is larger than the last. Cache the result in a variable.
-const firstNumGreaterThanLast = n1 > n4;
-console.log(firstNumGreaterThanLast);
+const firstGreaterThanLast = n1 > n4;
+console.log(firstGreaterThanLast);
 
 // Accomplish the following arithmetic chain:
-// Subtract the first number from the second number.
-let chainProb1 = n2 - n1;
+// Subtract the first number from the second number. Should be 5.
+const chainProb1 = n2 - n1;
 console.log(chainProb1);
-// Multiply the result by the third number.
-let chainProb2 = chainProb1 * n3;
+// Multiply the result by the third number. Should be 100.
+const chainProb2 = chainProb1 * n3;
 console.log(chainProb2);
 // Find the remainder of dividing the result by the fourth number.
-let chainProb3 = chainProb2 % n4;
+const chainProb3 = chainProb2 % n4;
 console.log(chainProb3);
 
 // OR this way:
 
-const chainProb = ((n2-1) * 3) % n4;
-console.log(chainProb);
+// const chainProb = ((n2-1) * 3) % n4;
+// console.log(chainProb);
 
 // Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
 const isLessThan25 = (n1 >= 25 && n2 >= 25 && n3 >= 25 && n4 >= 25);
 console.log(isLessThan25);
 const isValidAgain = isSum50 && isTwoOdd && isLessThan25 && isUnique;
 console.log("The result should be false: " + isValidAgain);
+
 
 // You are planning a cross-country road trip!
 // The distance of the trip, in total, is 1,500 miles.
@@ -90,21 +102,21 @@ console.log("The result should be false: " + isValidAgain);
 // The average cost of fuel is $3 per gallon.
 // Set up a program to answer the following questions:
 // How many gallons of fuel will you need for the entire trip?
-const fuelGallons1 = 1500 / 30;
-console.log(fuelGallons1 + " gallons to cover 1,500 miles at 55 MPH.");
-const fuelGallons2 = 1500 / 28;
-console.log(fuelGallons2 + " gallons to cover 1,500 miles at 60 MPH.");
-const fuelGallons3 = 1500 / 23;
-console.log(fuelGallons3 + " gallons to cover 1,500 miles at 75 MPH.");
-// Will your budget be enough to cover the fuel expense?
-const budget1 = fuelGallons1 * 3;
-console.log(budget1 + " needed to cover expenses.");
-const budget2 = fuelGallons2 * 3;
-console.log(budget2 + " needed to cover expenses.");
-const budget3 = fuelGallons3 * 3;
-console.log(budget3 + " needed to cover expenses.");
-// How long will the trip take, in hours?
-// Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?
-// Log the results of your calculations using string concatenation or template literals.
+// const fuelGallons1 = 1500 / 30;
+// console.log(fuelGallons1 + " gallons to cover 1,500 miles at 55 MPH.");
+// const fuelGallons2 = 1500 / 28;
+// console.log(fuelGallons2 + " gallons to cover 1,500 miles at 60 MPH.");
+// const fuelGallons3 = 1500 / 23;
+// console.log(fuelGallons3 + " gallons to cover 1,500 miles at 75 MPH.");
+// // Will your budget be enough to cover the fuel expense?
+// const budget1 = fuelGallons1 * 3;
+// console.log(budget1 + " needed to cover expenses.");
+// const budget2 = fuelGallons2 * 3;
+// console.log(budget2 + " needed to cover expenses.");
+// const budget3 = fuelGallons3 * 3;
+// console.log(budget3 + " needed to cover expenses.");
+// // How long will the trip take, in hours?
+// // Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?
+// // Log the results of your calculations using string concatenation or template literals.
 
-console.log(1 + 2 === 3);
+// console.log(1 + 2 === 3);
