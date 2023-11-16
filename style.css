@@ -1,0 +1,150 @@
+.jumbotron {
+    width: 100vw;
+    height: 80%;
+    background-color: black;
+    background-image: url("sakura.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+form textarea, input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    float: right;
+    clear: both;
+}
+
+/* Navigation Bar Dropdown */
+nav {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background: rgb(128, 186, 206);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+li>a:after {
+    content: ' »';
+}
+
+li>a:only-child:after {
+    content: '';
+}
+
+nav ul li a {
+    padding: 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    opacity: 0.5;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: rgb(206, 128, 187);
+    float: left;
+    z-index: 1;
+}
+
+nav ul li ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+
+/* Text Animation */
+svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: rgb(250, 69, 99);
+    /* font-size: 50px; */
+    font-weight: bold;
+    stroke-width: 2;
+   
+    animation: textAnimate 5s infinite alternate;
+    
+  }
+  
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:rgb(0, 157, 255)
+  
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: black;
+    }
+    
+  }
+
+/* Animation */
+
+
+
+/* @Media */
+svg * {
+    transition: fill .1s ease-out, opacity .1s ease-out;
+}
+
+@media all and (min-width: 320px) {
+    svg {
+        height: auto;
+        width: 100vw;
+        font-size: 50px;
+    }
+}
+
+@media all and (min-width: 640px) {
+    svg {
+        height: auto;
+        width: 100vw;
+        font-size: 60px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    svg {
+        height: auto;
+        width: 100vw;
+        font-size: 70px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    svg {
+        height: auto;
+        width: 100vw;
+        font-size: 80px;
+    }
+}
