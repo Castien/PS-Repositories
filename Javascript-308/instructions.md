@@ -65,9 +65,9 @@ Your goal is to analyze and transform this data such that the output of your pro
 
 If an AssignmentGroup does not belong to its course (mismatching course_id), your program should throw an error, letting the user know that the input was invalid. Similar data validation should occur elsewhere within the program.
 
-<You should also account for potential errors in the data that your program receives. What if points_possible is 0? You cannot divide by zero. What if a value that you are expecting to be a number is instead a string?>
+You should also account for potential errors in the data that your program receives. What if points_possible is 0? You cannot divide by zero. What if a value that you are expecting to be a number is instead a string?
 
-<Use try/catch and other logic to handle these types of errors gracefully.>
+Use try/catch and other logic to handle these types of errors gracefully.
 
 If an assignment is not yet due, do not include it in the results or the average. Additionally, if the learner’s submission is late (submitted_at is past due_at), deduct 10 percent of the total points possible from their score for that assignment.
 
@@ -87,8 +87,8 @@ When your application is complete, push your repo to GitHub and submit the link 
  X Use strings, numbers, and Boolean values cached within variables.
  X Use at least two if/else statements to control program flow. Optionally, use at least one switch statement.
 
-Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
-Utilize at least two different types of loops.
+X Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
+X Utilize at least two different types of loops.
 Utilize at least one loop control keyword such as break or continue.
 
  X Create and/or manipulate arrays and objects.
