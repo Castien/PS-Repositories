@@ -58,29 +58,23 @@ topMenuEl.classList.add('flex-around');
 //     { text: 'account', href: '/account' },
 // ];
 
-"var menuLinks = [
-{ text: 'about', href: '/about' },
-{
-    text: 'catalog', href: '#', subLinks: [
-        { text: 'all', href: '/catalog/all' },
-        { text: 'top selling', href: '/catalog/top' },
-        { text: 'search', href: '/catalog/search' },
-    ]
-},
-{
-    text: 'orders', href: '#', subLinks: [
-        { text: 'new', href: '/orders/new' },
-        { text: 'pending', href: '/orders/pending' },
-        { text: 'history', href: '/orders/history' },
-    ]
-},
-{
-    text: 'account', href: '#', subLinks: [
-        { text: 'profile', href: '/account/profile' },
-        { text: 'sign out', href: '/account/signout' },
-    ]
-},
-]; "
+var menuLinks = [
+  {text: 'about', href: '/about'},
+  {text: 'catalog', href: '#', subLinks: [
+    {text: 'all', href: '/catalog/all'},
+    {text: 'top selling', href: '/catalog/top'},
+    {text: 'search', href: '/catalog/search'},
+  ]},
+  {text: 'orders', href: '#' , subLinks: [
+    {text: 'new', href: '/orders/new'},
+    {text: 'pending', href: '/orders/pending'},
+    {text: 'history', href: '/orders/history'},
+  ]},
+  {text: 'account', href: '#', subLinks: [
+    {text: 'profile', href: '/account/profile'},
+    {text: 'sign out', href: '/account/signout'},
+  ]},
+];
 
 // Select the topMenuEl element
 document.querySelector('#top-menu');
