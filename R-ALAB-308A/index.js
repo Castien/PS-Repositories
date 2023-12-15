@@ -1,4 +1,4 @@
-// import * as Carousel from "Carousel.js";
+// import * as Carousel from "./Carousel.js";
 // import axios from "axios";
 
 // The breed selection input element.
@@ -22,6 +22,27 @@ const API_KEY = "";
  * This function should execute immediately.
  */
 
+// Create an async function "initialLoad"
+// This function should execute immediately.
+async function initialLoad() {
+  // Retrieve a list of breeds from the cat API using fetch()
+  try {
+    const response = await fetch('https://api.thecatapi.com');
+    const breeds = await response.json();
+    // Create new <options> for each of these breeds, and append them to breedSelect
+    breeds.forEach(breed => {
+      const option = document.createElement('option');
+      // Each option should have a value attribute equal to the id of the breed.
+      option.value = breed.id;
+      // Each option should display text equal to the name of the breed.
+      option.textDisplay = breed.name;
+      breedSelect.appendChild(option);
+    });
+  } catch (error) {
+    console.error('Some error.', error);
+  }
+}
+
 /**
  * 2. Create an event handler for breedSelect that does the following:
  * - Retrieve information on the selected breed from the cat API using fetch().
@@ -36,6 +57,8 @@ const API_KEY = "";
  * - Each new selection should clear, re-populate, and restart the Carousel.
  * - Add a call to this function to the end of your initialLoad function above to create the initial carousel.
  */
+
+
 
 /**
  * 3. Fork your own sandbox, creating a new one named "JavaScript Axios Lab."
@@ -88,9 +111,9 @@ const API_KEY = "";
  *   you delete that favourite using the API, giving this function "toggle" functionality.
  * - You can call this function by clicking on the heart at the top right of any image.
  */
-export async function favourite(imgId) {
-  // your code here
-}
+// export async function favourite(imgId) {
+//   // your code here
+// }
 
 /**
  * 9. Test your favourite() function by creating a getFavourites() function.
