@@ -187,7 +187,7 @@ topMenuEl.addEventListener('click', function (event) {
 // First, we will set the submenu to show or hide itself depending on the menu state:
 
 // Cache the subMenuEl at the beginning
-const subMenuEl = document.querySelector('#sub-menu');
+// const subMenuEl = document.querySelector('#sub-menu');
 
 // Within the event listener, if the clicked <a> element does not yet have a class 
 // of "active" (it was inactive when clicked):
@@ -220,7 +220,7 @@ topMenuEl.addEventListener('click', function (event) {
         subMenuEl.style.top = clickedLink.classList.contains('active') ? '100%' : '0';
 
         // Calling buildSubmenu and passing the array of sub-links as an argument.
-        buildSubmenu(correspondingLink.subLinks);
+        buildSubmenu(matchLink.subLinks);
     } else {
         subMenuEl.style.top = '0';
     }
