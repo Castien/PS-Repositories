@@ -1,6 +1,4 @@
-
-
-// Part 1: Getting Started
+// Part 1-1: Getting Started
 // Explore the provided code to familiarize yourself with important aspects
 // such as current DOM structure, element IDs, and available CSS classes.
 
@@ -26,8 +24,9 @@ mainEl.innerHTML = '<h1>DOM Manipulation</h1>';
 // Hint: Use the Element.classList API.
 mainEl.classList.add('flex-ctr');
 
+//==========================================================================================
 
-// Part 2: Creating a Menu Bar
+// Part 2-1: Creating a Menu Bar
 // Next, create a blank menu bar that we can use to later add some interactivity to the page:
 
 // Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
@@ -42,13 +41,13 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 // Add a class of flex-around to topMenuEl.
 topMenuEl.classList.add('flex-around');
 
+//==========================================================================================
 
-// Part 3: Adding Menu Buttons
+// Part 3-1: Adding Menu Buttons
 // Copy the following data structure to the top of your index.js file; you will use it to create your menu buttons.
 // If this data was provided by an external source, it would allow that source to control how our menu is built. 
 // We would simply implement the logic, and allow the data to decide what displays. 
 // This is not typically done with menus, but it can be done with any DOM element.
-
 
 // Menu data structure
 // let menuLinks = [
@@ -58,29 +57,61 @@ topMenuEl.classList.add('flex-around');
 //     { text: 'account', href: '/account' },
 // ];
 
+//==========================================================================================
+
+// For 4-2: Menu Button Update
+// Update the menuLinks array to the following:
+
+// "var menuLinks = [
+//   {text: 'about', href: '/about'},
+//   {text: 'catalog', href: '#', subLinks: [
+//     {text: 'all', href: '/catalog/all'},
+//     {text: 'top selling', href: '/catalog/top'},
+//     {text: 'search', href: '/catalog/search'},
+//   ]},
+//   {text: 'orders', href: '#' , subLinks: [
+//     {text: 'new', href: '/orders/new'},
+//     {text: 'pending', href: '/orders/pending'},
+//     {text: 'history', href: '/orders/history'},
+//   ]},
+//   {text: 'account', href: '#', subLinks: [
+//     {text: 'profile', href: '/account/profile'},
+//     {text: 'sign out', href: '/account/signout'},
+//   ]},
+// ];"
+
 var menuLinks = [
-  {text: 'about', href: '/about'},
-  {text: 'catalog', href: '#', subLinks: [
-    {text: 'all', href: '/catalog/all'},
-    {text: 'top selling', href: '/catalog/top'},
-    {text: 'search', href: '/catalog/search'},
-  ]},
-  {text: 'orders', href: '#' , subLinks: [
-    {text: 'new', href: '/orders/new'},
-    {text: 'pending', href: '/orders/pending'},
-    {text: 'history', href: '/orders/history'},
-  ]},
-  {text: 'account', href: '#', subLinks: [
-    {text: 'profile', href: '/account/profile'},
-    {text: 'sign out', href: '/account/signout'},
-  ]},
+    { text: 'about', href: '/about' },
+    {
+        text: 'catalog', href: '#', subLinks: [
+            { text: 'all', href: '/catalog/all' },
+            { text: 'top selling', href: '/catalog/top' },
+            { text: 'search', href: '/catalog/search' },
+        ]
+    },
+    {
+        text: 'orders', href: '#', subLinks: [
+            { text: 'new', href: '/orders/new' },
+            { text: 'pending', href: '/orders/pending' },
+            { text: 'history', href: '/orders/history' },
+        ]
+    },
+    {
+        text: 'account', href: '#', subLinks: [
+            { text: 'profile', href: '/account/profile' },
+            { text: 'sign out', href: '/account/signout' },
+        ]
+    },
 ];
 
-// Select the topMenuEl element
-document.querySelector('#top-menu');
+//==========================================================================================
 
+// The rest of Part 3-1:
 // Iterate over the menuLinks array
 menuLinks.forEach(link => {
+
+    // Select the topMenuEl element
+    document.querySelector('#top-menu');
 
     // Create an <a> element
     const menuLink = document.createElement('a');
@@ -95,9 +126,14 @@ menuLinks.forEach(link => {
     topMenuEl.appendChild(menuLink);
 });
 
-// Dom Manipulation Part 2 starts here
+//==========================================================================================
 
-// Part 3: Creating the Submenu
+// Dom Manipulation Part 2 starts here
+// Part 1-2 and 2-2 added to HTML and CSS entries
+
+//==========================================================================================
+
+// Part 3-2: Creating the Submenu
 // A submenu serves as an additional menu for users to select from, 
 // and offers more specific context to the top-level menu's options. 
 // We will start by using some DOM manipulation techniques to format the submenu 
@@ -119,33 +155,16 @@ subMenuEl.classList.add('flex-around');
 // Now, change the position of the submenu to temporarily hide it. 
 // Later, we will make the submenu appear dynamically based on user interaction:
 
-// Set the CSS position property of subMenuEl to the value of absolute
-subMenuEl.style.position = 'absolute';
+// // Set the CSS position property of subMenuEl to the value of absolute
+// subMenuEl.style.position = 'absolute';
 
 // Set the CSS top property of subMenuEl to the value of 0
-subMenuEl.style.top = '0';
+subMenuEl.style.top = '20';
 
-// Part 4: Adding Menu Interaction
-// In order to add submenu links, we will need to restructure the menuLinks array within index.js.
-// Update the menuLinks array to the following:
+//==========================================================================================
 
-// "var menuLinks = [
-//   {text: 'about', href: '/about'},
-//   {text: 'catalog', href: '#', subLinks: [
-//     {text: 'all', href: '/catalog/all'},
-//     {text: 'top selling', href: '/catalog/top'},
-//     {text: 'search', href: '/catalog/search'},
-//   ]},
-//   {text: 'orders', href: '#' , subLinks: [
-//     {text: 'new', href: '/orders/new'},
-//     {text: 'pending', href: '/orders/pending'},
-//     {text: 'history', href: '/orders/history'},
-//   ]},
-//   {text: 'account', href: '#', subLinks: [
-//     {text: 'profile', href: '/account/profile'},
-//     {text: 'sign out', href: '/account/signout'},
-//   ]},
-// ];"
+// Part 4-2: Adding Menu Interaction
+// In order to add submenu links, we will need to restructure the menuLinks array within index.js. (see above)
 
 // In order to add interaction:
 
@@ -153,7 +172,7 @@ subMenuEl.style.top = '0';
 const topMenuLinks = topMenuEl.querySelectorAll('a');
 
 // Attach a delegated 'click' event listener to topMenuEl.
-topMenuEl.addEventListener('click', function (event) {
+topMenuEl.addEventListener('click', function(event) {
 
     // The first line of code of the event listener function should call the event object's preventDefault() method.
     event.preventDefault();
@@ -170,78 +189,113 @@ topMenuEl.addEventListener('click', function (event) {
 
     // The event listener should add the active class to the <a> element that was clicked, 
     // unless it was already active, in which case it should remove it.
+    topMenuEl.querySelectorAll('a').forEach(link => {
+        link.classList.remove('active');
+    });
+
     // The event listener should remove the active class from each other <a> element in topMenuLinks - 
     // whether the active class exists or not.
     // Hint: Removing a non-existent class from an element does not cause an error!
-    topMenuLinks.forEach(link => {
-        if (link !== event.target) {
-            link.classList.remove('active');
-        }
-    });
-    event.target.classList.toggle('active');
+    const clickedElement = event.target;
+    clickedElement.classList.toggle('active');
+
+    const linkObject = menuLinks.find(link => link.text.toLowerCase() === clickedElement.textContent.toLowerCase());
+
+    if (linkObject && linkObject.subLinks) {
+        subMenuEl.innerHTML = ''; // Clear submenu
+        buildSubmenu(linkObject.subLinks, subMenuEl);
+        subMenuEl.style.display = 'block'; // Show the submenu
+    } else {
+        subMenuEl.style.display = 'none'; // Hide the submenu
+    }
 });
 
-// Part 5: Adding Submenu Interaction
+//==========================================================================================
 
-// Within the same event listener, we want to toggle the submenu between active and non-active states. 
+// Part 5-2: Adding Submenu Interaction
+
+// Within the same event listener, we want to toggle the submenu between active and non-active states.
 // First, we will set the submenu to show or hide itself depending on the menu state:
 
-// Cache the subMenuEl at the beginning
-// const subMenuEl = document.querySelector('#sub-menu');
+// Cache the subMenuEl at the beginning (already exists above)
 
-// Within the event listener, if the clicked <a> element does not yet have a class 
+// Within the event listener, if the clicked <a> element does not yet have a class
 // of "active" (it was inactive when clicked):
-
-topMenuEl.addEventListener('click', function (event) {
+subMenuEl.addEventListener('click', function(event) {
     event.preventDefault();
 
-    const clickedLink = event.target;
+    const clickedSubTab = event.target;
 
     // If the clicked <a> element's "link" object within menuLinks has a subLinks property
     // (all do, except for the "link" object for ABOUT), set the CSS top property of subMenuEl to 100%.
-    // Otherwise, set the CSS top property of subMenuEl to 0.
-    // Hint: Caching the "link" object will come in handy for passing its subLinks array later.
-    if (!clickedLink.matches('a')) return;
+    if (!clickedSubTab.matches('a')) return;
 
-    console.log(clickedLink.textContent.toLowerCase());
+    // Log the content of the <a> to verify the handler is working.
+    console.log(clickedSubTab.textContent.toLowerCase());
 
+    // Ensure that clicking CATALOG, ORDERS, etc. shows the submenu bar, 
+    // and that clicking them again hides it. 
     topMenuLinks.forEach(link => {
-        if (link !== clickedLink) {
-            link.classList.remove('active');
-        }
+        link.classList.remove('active');
     });
 
-    clickedLink.classList.toggle('active');
+    // Clicking ABOUT should not show the submenu bar.
+    if (clickedSubTab.textContent.toLowerCase() === 'about') {
+        mainEl.innerHTML = '<h1>About</h1>';
+    } else {
+        mainEl.innerHTML = `<h1>${clickedSubTab.textContent}</h1>`;
+    }
 
     // Get the corresponding link object from menuLinks
-    const matchLink = menuLinks.find(link => link.text.toLowerCase() === clickedLink.textContent.toLowerCase());
+    const matchLink = menuLinks.find(link => link.text.toLowerCase() === clickedSubTab.textContent.toLowerCase());
 
     if (matchLink && matchLink.subLinks) {
+        subMenuEl.innerHTML = buildSubmenu(matchLink.subLinks);
+        subMenuEl.style.display = subMenuEl.style.display === 'block' ? 'none' : 'block';
 
-        if (clickedLink.classList.contains('active')) {
+        if (clickedSubTab.classList.contains('active')) {
             subMenuEl.style.top = '100%';
             // Calling buildSubmenu and passing the array of sub-links as an argument.
-            buildSubmenu(matchingLink.subLinks, subMenuEl);
-          } else {
+            buildSubmenu(matchLink.subLinks, subMenuEl);
+        } else {
             subMenuEl.style.top = '0';
-          }
+        }
     } else {
         subMenuEl.style.top = '0';
     }
 });
 
-
 // The submenu needs to be dynamic based on the clicked link.
-
 // To facilitate that, we will create a helper function called buildSubmenu that does the following:
-function buildSubmenu(subLinks) {
 
+// function buildSubmenu(subLinks) {
+
+//     // Clear the current contents of subMenuEl.
+//     subMenuEl.innerHTML = '';
+
+//     // Iterate over the subLinks array, passed as an argument, and for each "link" object:
+//     subLinks.forEach(subLink => {
+
+//         // Create an <a> element
+//         const submenuLink = document.createElement('a');
+
+//         // Add an href attribute to the <a>, with the value set by the href property of the "link" object.
+//         submenuLink.setAttribute('href', subLink.href);
+
+//         // Set the element's content to the value of the text property of the "link" object.
+//         submenuLink.textContent = subLink.text;
+
+//         // Append the new element to the subMenuEl.
+//         subMenuEl.appendChild(submenuLink);
+//     });
+// }
+
+function buildSubmenu(subLinks, targetElement) {
     // Clear the current contents of subMenuEl.
-    subMenuEl.innerHTML = '';
+    targetElement.innerHTML = '';
 
     // Iterate over the subLinks array, passed as an argument, and for each "link" object:
     subLinks.forEach(subLink => {
-
         // Create an <a> element
         const submenuLink = document.createElement('a');
 
@@ -251,8 +305,8 @@ function buildSubmenu(subLinks) {
         // Set the element's content to the value of the text property of the "link" object.
         submenuLink.textContent = subLink.text;
 
-        // Append the new element to the subMenuEl.
-        subMenuEl.appendChild(submenuLink);
+        // Append the new element to the target element (subMenuEl).
+        targetElement.appendChild(submenuLink);
     });
 }
 
@@ -262,7 +316,7 @@ function buildSubmenu(subLinks) {
 // The menu is almost complete! Now, we need to add interactions to the submenu items themselves:
 
 // Attach a delegated 'click' event listener to subMenuEl.
-subMenuEl.addEventListener('click', function(event) {
+subMenuEl.addEventListener('click', function (event) {
 
     // The first line of code of the event listener function should call the event object's preventDefault() method.
     event.preventDefault();
@@ -271,34 +325,27 @@ subMenuEl.addEventListener('click', function(event) {
     const clickedSubTab = event.target;
     if (!clickedSubTab.matches('a')) return;
 
-// Log the content of the <a> to verify the handler is working.
+    // Log the content of the <a> to verify the handler is working.
     console.log(clickedSubTab.textContent.toLowerCase());
 
-// Next, the event listener should set the CSS top property of subMenuEl to 0.
+    // Next, the event listener should set the CSS top property of subMenuEl to 0.
     subMenuEl.style.top = '0';
 
-// Remove the active class from each <a> element in topMenuLinks.
+    // Remove the active class from each <a> element in topMenuLinks.
     topMenuLinks.forEach(link => {
         link.classList.remove('active');
     });
 
-// moved down to else statement
-// Update the contents of mainEl, within an <h1>, to the contents of the <a> element clicked within subMenuEl.
-//     mainEl.innerHTML = `<h1>${clickedSubMenuItem.textContent}</h1>`;
-// });
-
-// If the ABOUT link is clicked, an <h1>About</h1> should be displayed.
-if (clickedSubTab.textContent.toLowerCase() === 'about') {
-    mainEl.innerHTML = '<h1>About</h1>';
-  } else {
+    // moved down to else statement
     // Update the contents of mainEl, within an <h1>, to the contents of the <a> element clicked within subMenuEl.
-    mainEl.innerHTML = `<h1>${clickedSubTab.textContent}</h1>`;
-  }
+    //     mainEl.innerHTML = `<h1>${clickedSubMenuItem.textContent}</h1>`;
+    // });
+
+    // If the ABOUT link is clicked, an <h1>About</h1> should be displayed.
+    if (clickedSubTab.textContent.toLowerCase() === 'about') {
+        mainEl.innerHTML = '<h1>About</h1>';
+    } else {
+        // Update the contents of mainEl, within an <h1>, to the contents of the <a> element clicked within subMenuEl.
+        mainEl.innerHTML = `<h1>${clickedSubTab.textContent}</h1>`;
+    }
 });
-
-
-
-
-
-
-
