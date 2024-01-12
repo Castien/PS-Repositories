@@ -1,38 +1,108 @@
-const express = require("express");
+const express = require('express');
 
-const http = require('http');
+const app = express();
+const PORT = 3000;
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const router = express.Router();
 
-const server = http.createServer((req, res) => {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plain');
-        
-        if (req.url === '/'){
-            res.status = 200;
-            res.setHeader("Content-Type", "text/html");
-            res.write("<h1>Hello Node</h1>");
-            res.end();
-        } else if (req.url === '/test') {
-            res.status = 200;
-            res.setHeader("Content-Type", "text/html");
-            res.write("<h2>This is a test</h2>");
-            res.end();
-        } else if (req.url === '/products') {
-            res.status = 200;
-            res.setHeader("Content-Type", "text/html");
-            res.write("<h3>Products Page</h3>");
-            res.end();
-        } else {
-            res.status = 404;
-            res.setHeader("Content-Type", "text/html");
-            res.write("<h1>Page Not Found!</h1>");
-            res.end();
-        }
-        res.end('Hello World!\n');
+
+router.get('/', (req, res) => {
+    console.log(req.url);
+    res.send('Sending New Products!!')
+});
+
+
+router.post('/', (req, res) => {
+    console.log(req.url);
+    res.send('Adding new Product')
+});
+
+module.exports = router;
+
+app.get('/', (req , res) => {
+    console.log(req.url);
+
+    res.send('<h1>Hello Express</h1>');
+});
+
+app.get('/products', (req, res) => {
+    console.log(req.url);
+
+    res.send('<h1>Products Page</h1>');
+});
+
+app.get('/products/:productName', (req, res) => {
+    console.log(req.url);
+
+    res.send('<h1>Products Page</h1>');
+});
+
+app.get('/user', (req, res) => {
+    console.log(req.url);
+    console.log(req.method);
+
+    res.send('Sending the user info!');
+});
+
+app.post('/user', (req, res) => {
+    console.log(req.url);
+    console.log(req.method);
+
+    res.send('Creating new user....')
+});
+
+
+app.get('/user/:userID', (req, res) => {
+    console.log('Params Object ==>', req.params.userID);
+
+    res.send('test')
+});
+
+
+app.get('/user/:userID/profile/:data', (req, res) => {
+    console.log(req.params);
+
+    res.send(`Sending Profile for User: ${req.params.userID}`);
+});
+
+app.get('/user/:username/:password', (req, res) => {
+    console.log(req.params);
+
+    res.send(`Sending Profile for User: ${req.params.userID}`);
+});
+
+
+app.get('/flights/:from-:to', (req, res) => {
+    console.log(req.params);
+
+    res.send('Sending flights info!')
+});
+
+app.get('/shop/:brand', (req, res) => {
+    console.log(req.params.brand);
+    res.send('Sending products....')
+});
+
+
+app.route('/learner')
+    .get((req, res) => {
+        console.log(req.url);
+        res.send('Sending learner data')
+    })
+    .post((req, res) => {
+        console.log(req.url);
+        res.send('Creating new learner')
     });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+
+app.listen(PORT, () => {
+    console.log(`Server is running!`);
 });
+
+// middleware function
+const logger = (req, res, next) => {
+    console.log(`Received request to route ${req.url}`);
+    next();
+}
+
+app.use(logger);
