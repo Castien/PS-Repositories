@@ -1,0 +1,15 @@
+{
+  "name": "glab-318.1.1",
+  "version": "1.0.0",
+  "description": "A sample project demonstrating the functionality of Node and npm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Castien",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
