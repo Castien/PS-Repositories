@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
   const body = req.body;
   console.log(body);
   dvdData.push(body);
-  res.json({ message: 'The DVD entry has been added' });
+  res.json({ message: 'Success! DVD entry has been added.' });
 });
 
 // Read the list of DVDs

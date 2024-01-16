@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVD List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DVD List</title>
 </head>
-
 <body>
-    <h1>DVD List</h1>
-    <ul>
-        <% dvdData.forEach(entry=> { %>
-            <li>
-                <%= entry.title %> - <%= entry.upc %>
-            </li>
-            <% }); %>
-    </ul>
-</body>
+  <h1>DVD List</h1>
+  <ul>
+    <% dvdData.forEach(entry => { %>
+      <li><%= entry.title %> - <%= entry.release_date %></li>
+    <% }); %>
+  </ul>
 
+  <!-- Form to add a new DVD -->
+  <h2>Add a New DVD</h2>
+  <form action="api/animeigo/dvd" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="type">Type:</label>
+    <input type="text" id="type" name="type" required>
+
+    <label for="releaseDate">Release Date:</label>
+    <input type="text" id="releaseDate" name="release_date" required>
+
+    <button type="submit">Add DVD</button>
+  </form>
+</body>
 </html>
