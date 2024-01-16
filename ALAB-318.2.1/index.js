@@ -1,10 +1,24 @@
 const express = require('express');
+const morgan = require('morgan');
 
 const app = express();
 const PORT = 3000;
 
 const router = express.Router();
+// Morgan middleware for logging requests
+app.use(morgan('dev'));
 
+// ... other middleware and routes ...
+
+// Error handling middleware (optional)
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 router.get('/', (req, res) => {
     console.log(req.url);
