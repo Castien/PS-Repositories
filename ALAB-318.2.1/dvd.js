@@ -51,12 +51,12 @@ router.post('/', (req, res) => {
   res.json({ message: 'Success! DVD entry has been added.' });
 });
 
-// Read the list of DVDs
+// Retrieve the list of DVDs
 router.get('/', (req, res) => {
   res.render('dvd-list', { dvdData });
 });
 
-// Read details of a specific DVD
+// Retrieve details of a specific DVD
 router.get('/:id', (req, res) => {
   const { id } = req.params;
   const dvdEntry = dvdData.find(entry => entry.id === parseInt(id));

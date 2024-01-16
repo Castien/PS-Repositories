@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DVD Details</title>
 </head>
+
 <body>
   <h1>DVD Details</h1>
-  <p>Title: <%= dvdEntry.title %></p>
-  <p>Type: <%= dvdEntry.type %></p>
-  <p>Format: <%= dvdEntry.dvd_br %></p>
-  <p>Studio: <%= dvdEntry.studio %></p>
-  <p>Release Date: <%= dvdEntry.release_date %></p>
-  <p>UPC: <%= dvdEntry.upc %></p>
+  <p>Title: <%= dvdEntry.title %>
+  </p>
+  <p>Type: <%= dvdEntry.type %>
+  </p>
+  <p>Format: <%= dvdEntry.dvd_br %>
+  </p>
+  <p>Studio: <%= dvdEntry.studio %>
+  </p>
+  <p>Release Date: <%= dvdEntry.release_date %>
+  </p>
+  <p>UPC: <%= dvdEntry.upc %>
+  </p>
+
+  <!-- Add an image -->
+  <img src="/images/sample-image.jpg" alt="Sample Image" width="300">
+
+  <!-- Add a download button -->
+  <form action="/download" method="POST">
+    <input type="hidden" name="imagePath" value="/images/image.jpg">
+    <button type="submit">Download Image</button>
+  </form>
+
+  <!-- Add a link to go back to the DVD list -->
+  <a href="/api/v1/dvd">Back to DVD List</a>
 </body>
+
 </html>
