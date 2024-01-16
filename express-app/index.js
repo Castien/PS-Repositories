@@ -7,7 +7,7 @@ const port = 3000;
 
 
 const things = require("./routes/things");
-//middleware
+//Middleware
 //use the things.js file to handle endpoints that start with /things
 app.use(express.json());
 // path, router object
@@ -91,7 +91,78 @@ app.get("/user", (req, res) => {
     );
   });
 
+// Middleware functions occur between the request being received and the response being sent
+// Middleware has access to the request and response objects 
+// and the next function in the request-response cycle, allowing it to chain into that next function.
+// Middleware functions can:
+// -Execute any code.
+// -Make changes to the request and response objects.
+// -End the request-response cycle.
+// -Call the next piece of middleware in the stack.
+
+const logReq = function (req, res, next) {
+    console.log("Request Received");
+    next();
+  };
+  
+  // To load the middleware function, we must call app.use() 
+  // and pass the middleware function we would like to load.
+
+app.use(logReq);
+  
+  app.get("/", (req, res) => {
+    res.send("Keeping it simple.");
+  });
+
 app.listen(port, () => {
     console.log(`Server listening on port: ${port}.`);
   });
+
+  // Order in which middleware is loaded into the application
+  // is the order in which it will be executed.
+  // loaded the logging middleware after the routes -- won't even run
+//   app.use(logReq);
+
+
+// Middleware is particularly useful when handling anything that needs to be repeated
+// for every request-response cycle, like cookie validation. 
+// There is already a package that handles the parsing of cookies,
+// so we just need to create and use a validation function.
+
+// Use of third-party middleware using the cookie-parser module:
+const cookieParser = require("cookie-parser");
+
+async function validateCookies(req, res, next) {
+  await cookieValidator(req.cookies);
+  next();
+}
+
+async function cookieValidator(cookies) {
+  console.log(cookies);
+  // We don't have any cookies to validate, so we'll just return true for now.
+  return true;
+}
+
+app.use(cookieParser());
+app.use(validateCookies);
+
+
+// Error-handling middleware always takes four arguments. 
+// You must provide four arguments to identify it as an error-handling middleware function.
+// Even if you don’t need to use the next object, you must specify it to maintain the signature.
+// Otherwise, the next object will be interpreted as regular middleware
+// and will fail to handle errors.
+
+// error handler
+app.use((err, req, res, next) => {
+  res.status(400).send(err.message);
+});
+
+app.get("/", (req, res) => {
+  res.send("Keeping it simple.");
+});
+
+app.listen(port, () => {
+  console.log(`Server listening on port: ${port}.`);
+});
 
