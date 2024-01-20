@@ -1,0 +1,37 @@
+table {
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    border: 5px solid green;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ thead {
+    background-color: black;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+ }
+
+#table-header {
+    padding: 15px;
+}
+
+ #result {
+    text-align: right;
+ }
+
+ #buttons {
+    text-align: center;
+ }
+
+ th, td {
+    border: 1px solid red;
+    padding: 0 25px;
+ }
+ 
+ td:hover {
+    background-color: lightcoral;
+    color: white;
+ }
+ 

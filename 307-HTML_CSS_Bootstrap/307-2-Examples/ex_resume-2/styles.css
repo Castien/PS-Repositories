@@ -1,0 +1,65 @@
+/* intro section */
+
+h1 {
+    font-size: 64px;
+    padding: 2px;
+    color: white;
+    text-align: center;
+    background-color: hotpink;
+  }
+  
+  #todos {
+    color: red;
+  }
+  
+  #container {
+    padding: 20px;
+  }
+  
+  .item {
+    color: hotpink;
+  }
+  
+  h2 + p {
+    color: red;
+  }
+  
+  h2 ~ p {
+    color: purple;
+  }
+  
+  section p {
+    color: yellow;
+  }
+  
+  section > p {
+    color: blue;
+  }
+  
+  #learners_section h2:hover {
+    background-color: hotpink;
+  }
+  
+  #links_section h2:hover {
+    background-color: aqua;
+  }
+  
+  /* unvisited link */
+  a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
