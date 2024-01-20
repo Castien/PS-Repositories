@@ -1,0 +1,103 @@
+body {
+    background-color: black;
+    color: greenyellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1%;
+}
+
+a {
+    color: greenyellow;
+}
+
+a:hover {
+    color: magenta;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {}
+
+.boxes {
+    border: 2px greenyellow solid;
+    margin: 1% 1%;
+    padding: 2%;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header h1,
+h3 {
+    margin: 2px;
+}
+
+#header-1 {
+    border: 2px greenyellow solid;
+    padding: 5px 5px;
+    margin: 2%;
+}
+
+#header-2,
+#header-3,
+#header-4,
+#job1,
+#job2,
+#job3,
+#school1,
+#school2,
+#skill-bar,
+#skill-list {
+    padding: 0px 10px;
+    margin: 2%;
+}
+
+.employment {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section {
+    flex: 2;
+}
+
+aside {
+    flex: 1;
+    padding: 1%;
+}
+
+.inside-bar {
+    background-color: rgb(84, 85, 85);
+    color: black;
+    width: 90%;
+    color: black;
+    margin: 5%;
+}
+
+#bar1 {
+    background-color: magenta;
+    width: 90%;
+    text-align: right;
+}
+
+#bar2 {
+    background-color: magenta;
+    width: 60%;
+    text-align: right;
+}
+
+.exp-header {
+    display: flex;
+}
+
+.exp-header h4,
+p {
+    margin: 1px;
+}

@@ -1,0 +1,140 @@
+body {
+    background-color: darkviolet;
+    color: black;
+    margin: 10%;
+}
+
+/* Boxes holding all the content block elements. */
+.boxes {
+    border: 4px white solid;
+    background-color: blue;
+    padding: 5%;
+    margin: 1%;
+    
+    display: flex;
+}
+
+/* Sets image size to max and fills the entire div. */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
+/* Flex settings for header block element. */
+header {
+    display: flex;    
+    flex-flow: row wrap;
+}
+
+/* Flex settings for the header divs ids with picture, titles and information listed below. */
+.head-profile-1 {
+    display: flex;
+    flex-flow: row wrap;
+    order: -1;
+    flex-grow: 1;
+    height: 50%;
+}
+
+.head {
+    margin: 1%;
+    padding: 1%;
+}
+/* 
+.head-t {
+    margin: 1%;
+    flex-grow: 1;
+    position: relative;
+} */
+
+/* The image div box flexing according to content. Assigned the first order position. */
+#head-1 {
+    width: 100%;
+    padding: 3%;
+    align-items: center;
+    flex: 1 1 content;
+    order: -2;
+}
+
+/* The #head-2 and #head-3 div boxes flexed as a column that won't wrap inside a div id  "head-titles". Assigned the second order position together. */
+
+#head-titles {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    flex-grow: 4;
+
+    margin: 1%;
+    position: relative;
+}
+
+#head-2 {
+    margin-bottom: 1%;
+    padding: 0 3%;
+    flex: 0 1 auto;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#head-3 {
+    margin-top: 1%;
+    padding: 0 3%;
+    flex: 0 1 auto;   
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+/* End of the head titles styles. */
+
+/* The information div box being flexed by the class "head-profile-1". Assigned the first order position. */
+#head-4 {
+    order: 0;
+    flex: 1 1 auto;
+}
+
+/* Collectively applying a temporary background and border color to all the #head boxes inside the header tag. Comment this out if not needed.*/
+#head-1, #head-2, #head-3, 
+#head-4, #head-5 {
+    /* border: 4px white solid; */
+    /* background-color: gray; */
+}
+
+/* .central {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.central-box {
+    border: 4px white solid;
+    background-color: blue;
+    padding: 5%;
+    margin: 1%;
+}
+
+section {
+    flex-grow: 2;
+}
+
+aside {
+    width: 15%;
+}
+
+section, aside, footer {
+    display: flex;
+    flex-flow: column wrap;        
+    align-items: stretch;
+} */
+
+
+
+
+
+
+
+
