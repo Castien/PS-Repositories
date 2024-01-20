@@ -1,0 +1,79 @@
+body div {
+    width: 100px;
+    height: 100px;
+}
+
+#box1 {
+    background-color: green;
+    transition-property: background-color;
+    transition-duration: 2s;
+ }
+ #box1:hover {
+    background-color: lightskyblue;
+ }
+ 
+
+ /* box 2 */
+ #box2 {
+    background-color: yellow;
+    transition-property: font-size;
+    transition-duration: 2s;
+ }
+ #box2:hover {
+    font-size: 38px;
+ }
+ 
+/* box 3  */
+#box3 {
+    background-color: pink;
+    transition-property: width, height;
+    transition-duration: 2s;
+ }
+ #box3:hover {
+    width: 200px;
+    height: 200px;
+ }
+ 
+ /* box 4  */
+ #box4 {
+    background-color: blue;
+    transition-duration: 0.6s;
+ }
+ #box4:hover {
+    transform: translateX(100px);
+    /* transform: translateY(100px); */
+    /* transform: translate(100px, 100px); */
+ }
+ 
+ /* box 5  */
+ #box5 {
+    background-color: red;
+    transition-duration: 3s;
+ }
+ #box5:hover {
+    transform: rotate(360deg);
+ }
+ 
+ /* box 6 */
+ #box6 {
+    color: black;
+    background-color: white;
+    border: 3px solid #4284F4;
+    transition-property: color, background-color, border, transform;
+    transition-duration: 1s;
+ }
+ #box6:hover {
+    color: white;
+    background-color: black;
+    border: 5px solid #FFAB40;
+    transform: rotate(360deg);
+ }
+ 
+ #box7 {
+     background-color: blue;
+     transition: background-color 2s ease-out 1s
+ }
+
+ #box7:hover {
+    background-color: purple;
+ }
