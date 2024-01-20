@@ -1,0 +1,29 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 1% 1%;
+}
+
+.card-body {
+  border: 1px solid black;
+  width: 300px;
+  /* margin: 1%; */
+}
+
+.img-container {
+
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body p,
+.card-body h1 {
+  margin: 8px;
+}
