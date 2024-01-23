@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "title": "AD Police",
+        "type": "OVA",
+        "volume_subtitle": "Prequel to Bubblegum Crisis AV203-016/ANMDV509",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2004-10-05",
+        "upc": "737187005091"
+    },
+    {
+        "id": 2,
+        "title": "Arcadia of My Youth",
+        "type": "Movie",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2003-11-25",
+        "upc": "737187004452"
+    },
+    {
+        "id": 3,
+        "title": "Baoh",
+        "type": "OVA",
+        "volume_subtitle": "AV200-062",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2001-12-31",
+        "upc": "737187003387"
+    },
+    {
+        "id": 4,
+        "title": "Baoh",
+        "type": "OVA",
+        "volume_subtitle": "AV202-062",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2002-02-28",
+        "upc": "737187003387"
+    },
+    {
+        "id": 5,
+        "title": "Battle Royal High School",
+        "type": "OVA",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2003-09-30",
+        "upc": "737187004490"
+    },
+    {
+        "id": 6,
+        "title": "Bubblegum Crash",
+        "type": "OVA",
+        "volume_subtitle": "Total Crash Collection",
+        "dvd_br": "DVD",
+        "studio": "AnimEgo",
+        "release_date": "2001-12-18",
+        "upc": "737187003509"
+    },
+    {
+        "id": 7,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "Collector's Edition - Varient 1 - Group Cover",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "1998-09-22",
+        "upc": "753182043326"
+    },
+    {
+        "id": 8,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "Collector's Edition - Varient 2 - Priss Cover",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "1998-09-22",
+        "upc": "753182043326"
+    },
+    {
+        "id": 9,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 1 (Megaseries)",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "1999-02-16",
+        "upc": "753182043418"
+    },
+    {
+        "id": 10,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 2 (Megaseries)",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "1999-02-16",
+        "upc": "753182043425"
+    },
+    {
+        "id": 11,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 3 (Megaseries)",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "1999-02-16",
+        "upc": "753182043432"
+    },
+    {
+        "id": 12,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 4 - Hurricane Live! (Megaseries)",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2000-09-19",
+        "upc": "753182043722"
+    },
+    {
+        "id": 13,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "Megaseries Box Set w/ V. 1-4",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2000-11-14",
+        "upc": "753182043739"
+    },
+    {
+        "id": 14,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "Remastered Edition Box Set w/ V. 1-4",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2004-11-09",
+        "upc": "737187006791"
+    },
+    {
+        "id": 15,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "Remastered Edition Single Case",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2004-11-09",
+        "upc": "737187006791"
+    },
+    {
+        "id": 16,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 1 - Remastered Edition",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2005-02-08",
+        "upc": "737187006890"
+    },
+    {
+        "id": 17,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 2 - Remastered Edition",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2005-03-08",
+        "upc": "737187006999"
+    },
+    {
+        "id": 18,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 3 - Remastered Edition",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2005-04-12",
+        "upc": "737187007095"
+    },
+    {
+        "id": 19,
+        "title": "Bubblegum Crisis",
+        "type": "OVA",
+        "volume_subtitle": "V. 4 - Remastered Edition",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2005-04-12",
+        "upc": "737187007095"
+    },
+    {
+        "id": 20,
+        "title": "Crusher Joe",
+        "type": "Series",
+        "volume_subtitle": "Two Disc Set - Movie and OVA Series",
+        "dvd_br": "DVD",
+        "studio": "AnimEigo",
+        "release_date": "2003-09-23",
+        "upc": "737187003974"
+    }
+]
