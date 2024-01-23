@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <style>
+        body {
+            padding: 3%;
+            background-color: black;
+        }
+
+        /* Main Containers */
+        /* .container {
+            background-color: blueviolet;
+        } */
+
+        .main {
+            background-color: rgb(137, 201, 222);
+            /* padding: 1%; */
+        }
+
+        .right-main,
+        .left-main {
+            background-color: rgb(255, 255, 151)
+        }
+
+
+
+        /* Right Side */
+        /* .profile {
+            background-color: orange;
+        } */
+
+        .profile-menu,
+        .blackspace {
+            background-color: rgb(252, 160, 160);
+        }
+
+        .header,
+        .footer {
+            background-color: rgb(254, 203, 254);
+        }
+
+        /* Left Side */
+        .column1 {
+            background-color: rgb(248, 207, 129);
+        }
+
+        .column2 {
+            background-color: whitesmoke;
+        }
+
+        /* Styles I need to figure out bootstrap equivalent for. Comment out as I go. */
+
+        .btn-primary {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .btn-secondary {
+            background-color: rgb(159, 243, 148);
+            color: black
+        }
+        .btn-link {
+            background-color: rgb(157, 157, 237);
+            color: black;
+        }
+
+        .profile-pic {
+            border: 4px black solid;
+            /* border-radius: 100%;
+            height: 100%;
+            width: auto; */
+        }
+
+        /* .icon {
+            object-fit: contain;
+        } */
+
+        .carousel {
+            border: 4px black solid;
+            height: 220px;
+            width: 100%;
+            /*border-radius: 10%;
+            object-fit: cover;*/
+            object-position: right;
+        }
+
+        .column1,
+        .column2 {
+            height: 80vh;
+        }
+
+        .header,
+        .footer {
+            height: 10vh;
+        }
+
+
+        /* To make buttons shrink while flexing and take up the whole line when screen is small. */
+        /* Found here: https://stackoverflow.com/questions/19934647/resize-buttons-responsively-in-bootstrap */
+        .btn {
+            width: 100%;
+            border: 1px black solid;
+            margin: 2% 3%;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .btn {
+                font-size: 11px;
+                padding: 4px 6px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .btn {
+                font-size: 14px;
+                padding: 8px 10px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main row g-0 p-3 d-flex flex-row-reverse rounded">
+            <!-- Right Side is top when flexed. -->
+            <div class="right-main col-md-3 p-2 order-1 rounded">
+                <div class="profile row g-0 d-flex flex-wrap align-self-center">
+                    <div class="profile-top col-md-12">
+                        <img class="profile-pic img-fluid align-self-center rounded-circle h-100 w-auto"
+                            src="profilepic.jpg" alt="profilepic">
+                    </div>
+                    <div class="user-name col-md-12 align-self-center text-center">
+                        <h3>ADMIN USERNAME</h3>
+                    </div>
+                </div>
+                <div class="profile-menu col-md-12 p-3">
+                    <div>
+                        <div class="login col-md-12">
+                            <button class="btn btn-secondary" type="button">LOGIN</button>
+                        </div>
+                        <div class="link1 col-md-12">
+                            <button class="btn btn-link" type="button">Link</button>
+                        </div>
+                        <div class="link2 col-md-12">
+                            <button class="btn btn-link" type="button">Link</button>
+                        </div>
+                        <div class="link3 col-md-12">
+                            <button class="btn btn-link" type="button">Link</button>
+                        </div>
+                        <div class="link4 col-md-12">
+                            <button class="btn btn-link" type="button">Link</button>
+                        </div>
+                        <div class="link5 col-md-12">
+                            <button class="btn btn-link" type="button">Link</button>
+                        </div>
+                        <div class="link6 col-md-12">
+                            <button class="btn btn-link" type="button">Link</button>
+                        </div>
+                        <div class="blankspace col-md-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left Side is bottom when flexed. -->
+            <div class="left-main col-md-9 h-100 order-2">
+                <div class="header row g-0 p-2 h-auto">
+                    <!-- Was not in the wireframe plan, but decided to add an icon in the top left corner. -->
+                    <div class="top-menu row g-0 d-flex flex-row flex-wrap align-self-center">
+                        <div class="top-icon col-md-1 row g-0 d-flex flex-row flex-wrap align-self-center">
+                            <img class="icon img-fluid object-fit-contain" src="icon.jpg" alt="profilepic">
+                        </div>
+                        <div class="top-buttons col-md-11 row g-0 d-flex flex-row flex-wrap justify-content-end">
+                            <div class="dropdown col-md-2">
+                                <button class="btn btn-primary dropdown-toggle " type="button"
+                                    data-toggle="dropdown">Site Manager
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html">1</a></li>
+                                    <li><a href="index.html">2</a></li>
+                                    <li><a href="index.html">3</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown col-md-2">
+                                <button class="btn btn-primary dropdown-toggle" type="button"
+                                    data-toggle="dropdown">Content Mod
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html">1</a></li>
+                                    <li><a href="index.html">2</a></li>
+                                    <li><a href="index.html">3</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown col-md-2">
+                                <button class="btn btn-primary dropdown-toggle" type="button"
+                                    data-toggle="dropdown">User Manager
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html">1</a></li>
+                                    <li><a href="index.html">2</a></li>
+                                    <li><a href="index.html">3</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown col-md-2">
+                                <button class="btn btn-primary dropdown-toggle" type="button"
+                                    data-toggle="dropdown">Stats
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main display and side gallery columns. -->
+                <div class="content row g-0 d-flex flex flex-wrap">
+                    <!-- Set scroll for overflow-y on columns, but is not working. Will come back to it. -->
+                    <div class="gallery col-md-4 d-flex flex-row flex-wrap justify-content-start">
+                        <div class="column1 col-12 p-2 overflow-y-scroll">
+                            <img class="carousel img-fluid align-self-center rounded object-fit-cover" src="image1.jpg"
+                                alt="carosel-img">
+                            <br>
+                            CAROUSEL IMAGE GALLERY
+                            <br>
+                            <img class="carousel img-fluid align-self-center rounded object-fit-cover" src="image2.jpg"
+                                alt="carosel-img">
+                        </div>
+                    </div>
+                    <!-- Why isn't this wrapping? Come back to this. -->
+                    <div class="display col-md-8">
+                        <div class="column2 col-md-12 p-2 overflow-y-auto">
+                            <div class="content-text">
+                                Main Content Stuff Goes Here
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut cupiditate rerum quia,
+                                necessitatibus commodi eius ipsum et natus blanditiis porro possimus animi omnis
+                                eveniet
+                                culpa modi perferendis soluta velit delectus. Lorem ipsum dolor, sit amet
+                                consectetur
+                                adipisicing elit. Ipsam tempore dolorum vel sint animi! Dicta obcaecati eaque nulla
+                                distinctio nam voluptatibus cum tempora, facere minus quia unde minima eos nemo!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer can hold some additional links. -->
+                <!-- <div class="footer row g-0 d-flex flex-wrap h-auto">
+                    <div class="footer-text col-md-12 p-2">
+                        <p>Footer</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
