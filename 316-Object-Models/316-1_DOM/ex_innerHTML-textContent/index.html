@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML vs. textContent</title>
+</head>
+
+<body>
+    <!-- DOM elements have a couple of properties that can read and set their content:
+        innerHTML - Used to retrieve/set content as HTML.
+        textContent - Used to retrieve/set content as plain text. 
+    
+    innerHTML is an extremely powerful tool, which can allow for complete rewrites of DOM contents
+    textContent is an efficient text manipulation tool
+    -->
+
+    <h1>Changing DOM Contents</h1>
+    <div>
+        The elements below have been created with JavaScript DOM methods. Their
+        contents have been set via <code>innerHTML</code> and
+        <code>textContent</code>.
+    </div>
+
+    <br />
+
+    <div id="app"></div>
+
+    <script src="src/index.js"></script>
+
+
+</body>
+
+</html>
