@@ -1,12 +1,10 @@
 // Sample data
-const notes = [
+let notes = JSON.parse(localStorage.getItem('notes')) || [
     { id: 1, title: 'Introduction to JavaScript', content: 'JavaScript is a programming language...' },
-    // Add more notes
 ];
 
 const quizzes = [
     { id: 1, category: 'JavaScript Basics', questions: ['What is JavaScript?', 'How to declare a variable?'] },
-    // Add more quizzes
 ];
 
 // Function to show notes
@@ -27,6 +25,35 @@ function showQuizzes() {
     // Create HTML for quizzes
     const quizzesHTML = quizzes.map(quiz => `<div class="quiz"><h2>${quiz.category}</h2><ul>${quiz.questions.map(question => `<li>${question}</li>`).join('')}</ul></div>`).join('');
     contentDiv.innerHTML = quizzesHTML;
+}
+
+// Function to handle form submission for adding a new note
+function addNote() {
+    const titleInput = document.getElementById('noteTitle');
+    const contentInput = document.getElementById('noteContent');
+
+    const newNote = {
+        id: notes.length + 1,
+        title: titleInput.value,
+        content: contentInput.value,
+    };
+
+    notes.push(newNote);
+
+    // Update the UI to show the new note
+    showNotes();
+
+    // Clear the input fields
+    titleInput.value = '';
+    contentInput.value = '';
+
+    // Save notes to localStorage
+    saveNotesToLocalStorage();
+}
+
+// Function to save notes to localStorage
+function saveNotesToLocalStorage() {
+    localStorage.setItem('notes', JSON.stringify(notes));
 }
 
 // Initial load (show notes by default)

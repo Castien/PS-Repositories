@@ -7,22 +7,52 @@ body {
 #app {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
 }
 
 nav {
-    margin-top: 10px;
+    display: flex;
 }
 
 button {
-    margin-right: 10px;
-    padding: 8px 16px;
+    margin-left: 10px;
 }
 
 #content {
     margin-top: 20px;
+}
+
+form {
+    width: 40%;
+    float: right;
+    padding: 10px;
+}
+
+#addNoteForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#addNoteForm input,
+#addNoteForm textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#showNotesBtn {
+    width: 60%;
+    float: left;
+    padding: 10px;
 }

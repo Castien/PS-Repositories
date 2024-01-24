@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Study Helper</title>
 </head>
+
 <body>
     <div id="app">
         <header>
@@ -14,6 +16,17 @@
                 <button onclick="showNotes()">Notes</button>
                 <button onclick="showQuizzes()">Quizzes</button>
             </nav>
+            <div id="noteForm">
+                <form id="addNoteForm" onsubmit="addNote(); return false;">
+                    <label for="noteTitle">Title:</label>
+                    <input type="text" id="noteTitle" required>
+
+                    <label for="noteContent">Content:</label>
+                    <textarea id="noteContent" required></textarea>
+
+                    <button type="submit">Add Note</button>
+                </form>
+            </div>
         </header>
 
         <div id="content">
@@ -23,4 +36,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
