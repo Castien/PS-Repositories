@@ -1,0 +1,27 @@
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+body {
+  background: #f5f5f4;
+  color: #232323;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.circle {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 255);
+}

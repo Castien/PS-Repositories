@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin-top: 50px;
+}
+.container p {
+  text-align: center;
+}
+.container form {
+  text-align: center;
+}
+.container input {
+  padding: 5px 10px;
+}
+
+.warning {
+  margin-top: 10px;
+  border: 2px solid #f39389;
+  border-radius: 2px;
+  padding: 10px;
+  width: 250px;
+  position: absolute;
+  background-color: #fbd8d4;
+  color: #3b3c40;
+  left: calc(50% - 125px);
+}
