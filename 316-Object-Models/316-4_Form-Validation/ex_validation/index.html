@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <div>
+        The <code>required</code> attribute defines fields that must be filled out
+        before a form can be submitted.
+    </div>
+    <div>
+        The <code>minlength</code> and <code>maxlength</code> attributes define
+        the length that an input must adhere to in order to be considered valid.
+    </div>
+    <div>
+        The <code>min</code> and <code>max</code> attributes define the value that
+        an input must adhere to in order to be considered valid.
+    </div>
+    <div>
+        The <code>pattern</code> attribute provides powerful tools for matching an
+        input to a desired format using regular expressions.
+    </div>
+
+    <br />
+
+    <div id="app">
+
+        <p>Try submitting this form without any input.</p>
+        <p>Try submitting this form with input of varying lengths.</p>
+        <p>Try submitting this form with input of varying values.</p>
+        <p>Try submitting this form with input of varying values.</p>
+        <form id="myForm">
+
+            <!-- required attribute prevents submission entirely, including the firing of the submit event. -->
+            <!-- <input type="text" required /> -->
+
+            <!-- prompts the user to lengthen their input when below the number of characters specified by minlength,
+            but completely prevents input beyond the number of characters specified by maxlength. -->
+
+            <!-- <input type="text" minlength="4" maxlength="10" required /> -->
+
+            <!-- The min attribute defines the minimum value that is acceptable and valid
+            for the input containing the attribute. 
+            If the value of the element is less than this, the element fails constraint validation. 
+            This value must be less than or equal to the value of the max attribute. -->
+            <!-- The max attribute defines the maximum value that is acceptable and valid
+             for the input containing the attribute. 
+             If the value of the element is greater than this, the element fails constraint validation. 
+             This value must be greater than or equal to the value of the min attribute. -->
+            <!-- <input type="time" min="09:00:00" max="17:00:00" required /> -->
+
+            <!-- regular expression to test for any text that does not contain numbers or special characters -->
+            <!-- <input type="text" pattern="^[a-zA-Z]*$" title="One word with no numbers or special characters." required /> -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

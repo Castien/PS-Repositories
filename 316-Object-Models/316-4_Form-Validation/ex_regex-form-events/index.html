@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation with JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <form
+      action="javascript: alert('Success!');"
+      name="myForm"
+      method="POST"
+      id="form"
+    >
+      <input type="text" name="name" placeholder="Name" />
+      <input type="text" name="email" placeholder="Email" />
+      <input type="text" name="zip" placeholder="Zip Code" />
+      <select name="country">
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="UAE">UAE</option>
+      </select>
+      <input type="password" name="password" placeholder="Password" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

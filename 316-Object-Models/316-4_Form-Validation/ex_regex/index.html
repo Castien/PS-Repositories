@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="" name="myForm" method="POST">
+      <input
+        type="text"
+        name="Name"
+        placeholder="Enter a Username"
+        pattern="^[a-zA-Z]+"
+        title="Please start your username with a letter from a-z."
+        required
+      />
+      <input
+        type="text"
+        name="Email"
+        placeholder="Email with regEx"
+        title="Please start your email with a letter and follow the format name@mail.com"
+        pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$"
+        required
+      />
+      <input
+        type="email"
+        name="EmailTwo"
+        placeholder='Email with type="email"'
+        required
+      />
+      <input
+        type="tel"
+        name="Zip"
+        min="5"
+        maxlength="5"
+        id="ZipID"
+        placeholder="Enter Zip Code"
+        pattern="\d{5}"
+        title="Five-digit Zip Code"
+        required
+      />
+      <input
+        type="date"
+        id="date"
+        value="2024-12-31"
+        min="1910-01-01"
+        max="2024-12-31"
+        placeholder="Date of Birth"
+        required
+      />
+      <select name="Country" id="CountryId" required>
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="UAE">UAE</option>
+      </select>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        required
+      />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -29,7 +29,9 @@ If any requirements fail, the form should not submit.
 Part 3: Registration Form Validation Requirements:
 
 For the Registration Form section of the page, implement the following validation requirements:
+
 Registration Form - Username Validation:
+
 The username cannot be blank.
 The username must be at least four characters long.
 The username must contain at least two unique characters.
