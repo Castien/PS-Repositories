@@ -1,58 +1,116 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    padding: 10px 10px;
+    background-color: cornflowerblue;
+    ;
 }
 
 #app {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
+    background-color: white;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
 }
 
 h1 {
-    margin: 0;
-}
-
-nav {
-    display: flex;
-}
-
-button {
-    margin-left: 10px;
 }
 
 #content {
-    margin-top: 20px;
+    width: 90%;
+}
+
+#notesContent, #quizzesContent {
+    width: 100%;
+}
+
+
+#list {
+    background-color: white;
+    padding: 15px;
+}
+
+#forms {
+    display: flex;
+    justify-content: space-between;
 }
 
 form {
-    width: 40%;
-    float: right;
-    padding: 10px;
+    width: 45%;
+    height: 100px;
+    padding: 15px;
+    margin-top: 50px;
 }
 
-#addNoteForm label {
+label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-#addNoteForm input,
-#addNoteForm textarea {
+input,
+textarea {
     width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
+    height: 50px;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
-#showNotesBtn {
-    width: 60%;
-    float: left;
+button {
+    width: 100%;
+    padding: 25px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.note {
+    background-color: #87b7d7;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.note h2 {
+    margin: 0;
+    color: white;
+}
+
+
+.flash-card {
+    width: 20vw;
+    height: 30vh;
+    background-color: #9b59b6;
+    color: white;
     padding: 10px;
 }
+
+.flash-card input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* @media screen and (max-width: 600px) {
+    #content, #forms {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #content, #forms {
+        width: 50%;
+    }
+}  */
+

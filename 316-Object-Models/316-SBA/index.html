@@ -12,28 +12,46 @@
     <div id="app">
         <header>
             <h1>Study Helper</h1>
-            <nav>
-                <button onclick="showNotes()">Notes</button>
-                <button onclick="showQuizzes()">Quizzes</button>
-            </nav>
-            <div id="noteForm">
+        </header>
+        <div id="content">
+            <!-- Row for notes content -->
+            <div id="notesContent" class="content-row">
+                <div id="notesList">
+                    <!-- Notes content will be dynamically updated based on user interaction -->
+                </div>
+            </div>
+            <!-- Row for quizzes content -->
+            <div id="quizzesContent" class="content-row">
+                <div id="quizzesList">
+                    <!-- Quizzes content will be dynamically updated based on user interaction -->
+                </div>
+            </div>
+            <!-- Row for forms -->
+            <div id="forms" class="content-row">
+                <!-- Form for adding new note -->
                 <form id="addNoteForm" onsubmit="addNote(); return false;">
-                    <label for="noteTitle">Title:</label>
+                    <label for="noteTitle">Note Title:</label>
                     <input type="text" id="noteTitle" required>
 
-                    <label for="noteContent">Content:</label>
+                    <label for="noteContent">Note Content:</label>
                     <textarea id="noteContent" required></textarea>
 
                     <button type="submit">Add Note</button>
                 </form>
-            </div>
-        </header>
 
-        <div id="content">
-            <!-- Content updated based on user interaction -->
+                <!-- Form for adding new flash card -->
+                <form id="addFlashCardForm" onsubmit="addFlashCard(); return false;">
+                    <label for="flashCardQuestion">Question:</label>
+                    <input type="text" id="flashCardQuestion" required>
+
+                    <label for="flashCardAnswer">Answer:</label>
+                    <input type="text" id="flashCardAnswer" required>
+
+                    <button type="submit">Add Flash Card</button>
+                </form>
+            </div>
         </div>
     </div>
-
     <script src="app.js"></script>
 </body>
 
