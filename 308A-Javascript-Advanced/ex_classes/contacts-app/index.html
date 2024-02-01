@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/index.js" defer></script>
+    <title>Contacts App</title>
+  </head>
+  <body>
+    <h1>Contacts App</h1>
+
+    <form>
+      <h2>Add a new Contact</h2>
+      <label for="contact-name">Contact Name: </label>
+      <input type="text" id="contact-name" required/>
+
+      <br />
+
+      <label for="contact-email">Contact Email</label>
+      <input type="email" id="contact-email" required/>
+
+      <br />
+      <button>Add Contact</button>
+    </form>
+
+    <div id="contacts-list">
+        <h2>Contacts List</h2>
+    </div>
+  </body>
+</html>
