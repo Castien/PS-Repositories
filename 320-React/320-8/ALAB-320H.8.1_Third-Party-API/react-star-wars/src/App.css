@@ -1,5 +1,16 @@
+@font-face {
+  font-family: myStarFont;
+  src: url(./Starjedi.ttf);
+}
+
+@font-face {
+  font-family: farFarAway;
+  src: url(./UniversLTStd-Bold.otf);
+}
+
 .App {
   text-align: center;
+  font-family: myStarFont;
 }
 
 .App-logo {
@@ -36,3 +47,52 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  font-family: myStarFont;
+  font-size: 150px;
+  text-align: center;
+  color: yellow;
+  margin: 0 0 0 0;
+}
+
+h2 {
+  font-family: farFarAway;
+  font-size: 40px;
+  text-align: center;
+  color: yellow;
+}
+
+.starship-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.starship-card {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 80px;
+  text-align: center;
+  font-family: farFarAway;
+  font-size: 25px;
+  color: yellow;
+}
+
+.starship-card p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.starship-card a {
+  text-decoration: none;
+}
+
+
+
