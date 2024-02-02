@@ -16,6 +16,7 @@ function NavBar() {
 
   return (
     <nav>
+      <h1 style={{ color: "#e50914" }}>Movies FullStack App</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>
