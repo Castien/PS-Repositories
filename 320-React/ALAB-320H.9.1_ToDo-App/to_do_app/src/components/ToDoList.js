@@ -1,4 +1,4 @@
-const todoList = ({ todos, handleToggleComplete, handleDeletetodo, handleEdittodo, handleSaveEdit }) => {
+const TodoList = ({ todos, handleToggleComplete, handleDeleteTodo, handleEditTodo, handleSaveEdit }) => {
   return (
     <ul>
       {todos.map((todo) => (
@@ -19,16 +19,18 @@ const todoList = ({ todos, handleToggleComplete, handleDeletetodo, handleEdittod
               {todo.title}
             </span>
           )}
-          <button onClick={() => handleDeletetodo(todo.id)} disabled={todo.completed}>
+          <button onClick={() => handleDeleteTodo(todo.id)} disabled={todo.completed}>
             Delete
           </button>
           {todo.editing ? (
             <button onClick={() => handleSaveEdit(todo.id, todo.title)}>Save</button>
           ) : (
-            <button onClick={() => handleEdittodo(todo.id)}>Edit</button>
+            <button onClick={() => handleEditTodo(todo.id)}>Edit</button>
           )}
         </li>
       ))}
     </ul>
   );
 };
+
+export default TodoList;
