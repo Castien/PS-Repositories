@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     // connect to the backend
     const fetchData = async () => {
-      const res = await fetch("https://movies-fullstack-backend-w210.onrender.com/api/movies");
+      const res = await fetch("https://my-movies-project.onrender.com/api/movies");
       const data = await res.json();
       console.log(data);
       // set the data to the state movies variable

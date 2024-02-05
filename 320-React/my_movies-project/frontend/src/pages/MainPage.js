@@ -24,7 +24,7 @@ function MainPage() {
     }
 
     // make a POST request to the backend
-    const res = await axios.post("https://movies-fullstack-backend-w210.onrender.com/api/users/signin", {
+    const res = await axios.post("https://my-movies-project.onrender.com/api/users/signin", {
       email: emailInputRef.current.value,
       password: passwordInputRef.current.value,
     });
