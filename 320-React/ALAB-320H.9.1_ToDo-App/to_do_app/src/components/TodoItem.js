@@ -5,14 +5,18 @@ function TodoItem({ todo, dispatch }) {
   const [showEdit, setShowEdit] = useState(false);
   const [newTitle, setNewTitle] = useState(title);
 
-  //
   const handleSave = () => {
     dispatch({ type: "EDIT_TODO", payload: { id: todo.id, title: newTitle } });
     setShowEdit(false);
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    <li>
+      <input
+        type="checkbox"
+        checked={completed}
+        onChange={() => dispatch({ type: "TOGGLE_COMPLETED", payload: { id: todo.id } })}
+      />
       {showEdit ? (
         <>
           <input
@@ -23,25 +27,19 @@ function TodoItem({ todo, dispatch }) {
         </>
       ) : (
         <>
-          <input
-            type="checkbox"
-            defaultChecked={completed}
-            onChange={() =>
-              dispatch({ type: "TOGGLE_COMPLETED", payload: { id: todo.id } })
-            }
-          />
-          <h3>{title}</h3>
+          <span style={{ textDecoration: completed ? 'line-through' : 'none' }}>
+            {title}
+          </span>
           <button onClick={() => setShowEdit(!showEdit)}>Edit</button>
           <button
-            onClick={() =>
-              dispatch({ type: "DELETE_TODO", payload: { id: todo.id } })
-            }
+            onClick={() => dispatch({ type: "DELETE_TODO", payload: { id: todo.id } })}
+            disabled={completed}
           >
             Delete
           </button>
         </>
       )}
-    </div>
+    </li>
   );
 }
 
